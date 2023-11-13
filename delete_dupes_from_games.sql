@@ -1,16 +1,3 @@
-with cte as (
-    select
-        id,
-        row_number() over(partition by id order by id) rownum
-    from games
-)
-
-delete
---select *
-from games
-where exists (
-    select 1
-    from cte
-    where games.id = cte.id
-    and rownum > 1
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:53754690c37c448de3001607dd397e609d90d4e81366bda19c83280f2b3e0107
+size 236
