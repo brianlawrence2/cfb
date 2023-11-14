@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e5f41a9f16b3272c52279a7348bd5636742b838275ef75f87fd74da8721f83d
-size 338
+#!/bin/bash
+
+# Download and install miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+bash miniconda.sh -b -p $HOME/miniconda
+export PATH="$HOME/miniconda/bin:$PATH"
+
+conda init bash
+source ~/.bashrc
+
+conda env create -f .devcontainer/environment.yml
+
+conda activate cfb
+
+rm miniconda.sh
