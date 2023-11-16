@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: staging
+    database: cfb
+    schema: main
+
+    tables:
+      - name: plays
+      - name: plays_2018
+      - name: plays_2019
+      - name: plays_2020
+      - name: plays_2021
+      - name: plays_2022
+      - name: plays_2023
