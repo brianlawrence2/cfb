@@ -1,0 +1,10 @@
+wandb_version: 1
+
+booster:
+  value: gblinear
+learning_rate:
+  value: 0.2
+max_depth:
+  value: 3
+subsample:
+  value: 1

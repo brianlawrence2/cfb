@@ -1,0 +1,10 @@
+wandb_version: 1
+
+booster:
+  value: gbtree
+learning_rate:
+  value: 0.1
+max_depth:
+  value: 3
+subsample:
+  value: 0.5
