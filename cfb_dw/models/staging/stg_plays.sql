@@ -4,7 +4,7 @@
     )
 }}
 
-with plays as (
+with all_plays as (
     select * from {{ source('staging', 'plays') }}
 
     union
@@ -32,7 +32,7 @@ with plays as (
     select * from {{ source('staging', 'plays_2023') }}
 )
 
-select 
+select distinct
     id,
     drive_id,
     game_id,
@@ -78,4 +78,4 @@ select
         else 0
     end as is_kickoff,
     ppa
-from plays
+from all_plays
